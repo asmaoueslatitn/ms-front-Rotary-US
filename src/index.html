@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script>
+        function previewFile(){
+            var preview = document.querySelector('img'); //selects the query named img
+            var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+            var reader  = new FileReader();
+      
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+      
+            if (file) {
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                preview.src = "";
+            }
+       }
+      
+       previewFile();  //calls the function named previewFile()
+       </script>
+  <meta charset="utf-8">
+  <title>MsFrontWeb</title>
+  <base href="/">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDreh_UQ2uJkQ3tohkR88PiT3oXHS4L58g&libraries=places&callback=initMap"></script>
+</script>
+
+  <script >
+    function visibilite(id) {
+var left = document.getElementsByTagName('div');
+    for(var no=0;no<left.length;no++){
+        if(left[ no].className=='left'){ // on cible les left dont la class est 'left'
+            left[ no].style.display = "none"; // on les masque tous
+        }
+    }
+    document.getElementById(id).style.display = "block"; // on affiche le div appelé
+}
+
+  </script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script type="text/javascript">
+		$.cookie('googtrans', '/en/it');
+		</script>
+	<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+<body>
+  
+  <app-root></app-root>
+</body>
+</html>

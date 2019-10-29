@@ -1,0 +1,37 @@
+<div class="container" *ngIf="listFormations" >  
+  <div class= "panel panel-primary">
+    <div class="panel-heading" > liste Etudiants </div> 
+    <div class="panel-body">
+      <span *ngFor="let f of listFormations._embedded.formations" > 
+      
+    <button  (click)="onGetEtudiants(f)"  [ngClass]="f.id==currentFormation.id ? 'btn btn-danger': 'btn btn-primary'" class="btn btn-primary"> {{f.nom}} </button> 
+  </span> 
+  <table *ngIf="listEtudiants"  class="table" >
+  <tr >
+    
+    <th>nom</th> 
+    <th>prenom</th>
+    <th>Date de Naissance </th>
+    <th>photo</th>
+
+
+
+  </tr>
+  <tr *ngFor="let e of listEtudiants._embedded.etudiants "> 
+    <td> {{e.nom}}</td>
+    <td> {{e.prenom}}</td>
+    <td> {{e.dateNaissance}}</td>
+    
+    
+ 
+</table>
+  </div>
+</div>
+</div>
+
+<div *ngIf="listImages">
+<span *ngFor="let c of listImages._embedded.imageModels" > 
+  <img class="images" src="{{c.pic}}.{{c.type}}"/>
+  
+</span> </div>
+<button (click)="onSetEtudiants()"> add it</button>

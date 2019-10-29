@@ -1,0 +1,52 @@
+
+  
+   
+  
+ 
+  
+  <section id ="login-form" class="contact-form">
+      <div class="container">
+          <div class="row">
+              <form   id="contact-form" >
+                  <div class="col-md-6 col-sm-12">
+                      <div class="block">
+                          <div class="form-group">
+                              <input type="name" [(ngModel)]="user.name" placeholder="Name" name="name" class="form-control" id="name">
+                            </div>
+                          <div class="form-group">
+                              <input [(ngModel)]="user.designation" placeholder="Designation" name="designation" class="form-control" id="designation">
+                            </div>  
+                          <div class="form-group">
+                              <button   id="login-button"class="btn btn-success" (click)="createEmployee()">Create</button>
+                            </div>
+                      </div>
+                  </div>
+                 
+                  
+              </form>
+          </div>
+         
+      </div>
+  </section>
+  <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-manu">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Terms</a></li>
+              </ul>
+            </div>
+            
+            <p class="copyright">Copyright 2018 &copy; Design & Developed by <a href="http://www.themefisher.com">themefisher.com</a>. All rights reserved.
+              <br>
+              Get More <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Templates</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>

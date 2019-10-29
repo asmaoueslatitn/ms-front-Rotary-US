@@ -1,0 +1,49 @@
+
+
+
+<section id ="login-form" class="contact-form">
+    <div class="container">
+        <div class="row">
+            <form   id="contact-form" >
+                <div class="col-md-6 col-sm-12">
+                    <div class="block">
+                        <div class="form-group">
+                            <input  name="username" type="text" class="form-control"  [(ngModel)]="username" placeholder="Your Login" >
+                        </div>
+                        <div class="form-group">
+                            <input  name="username" type="password" class="form-control"  [(ngModel)]="password" placeholder="Your Password" >
+                        </div>  
+                        <div class="form-group">
+                        <button  id="login-button" (click)=checkLogin() class="btn btn-default" type="submit">Login</button>
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </form>
+        </div>
+       
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-manu">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">How it works</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          
+          <p class="copyright">Copyright 2018 &copy; Design & Developed by <a href="http://www.themefisher.com">themefisher.com</a>. All rights reserved.
+            <br>
+            Get More <a href="https://themefisher.com/free-bootstrap-templates/" target="_blank">Free Bootstrap Templates</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>

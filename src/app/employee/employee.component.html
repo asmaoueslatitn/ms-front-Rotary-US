@@ -1,0 +1,65 @@
+<div id="listeUser"  class="col-md-6">
+  <table  class="table table-striped">
+  <thead >
+  <tr>
+    <th>name</th>
+    <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let employee of employees">
+          <td>{{employee.name}}</td>
+          <td>{{employee.designation}}</td>
+          <td><button  id="delet"class="btn btn-danger" (click)="deleteEmployee(employee)"> Delete Employee</button></td>
+          </tr>
+  </tbody>
+
+
+    </table>
+
+
+    <section class="contact-form">
+      <div class="container">
+          <div class="row">
+              <form  (ngSubmit)="processForm()" id="contact-form" >
+                <br />
+                  
+                  <div class="col-md-6 col-sm-12">
+                      <div class="block">
+                         
+                              <button  id="adding" class="btn btn-default"   (click)="newMember()" type="submit">Add New Member</button>
+                              
+                            
+                      </div>
+
+
+                      <div class="block">
+                         
+                          <button id="homing" class="btn btn-default"   (click)="return()" type="submit">Home</button>
+                          
+                        
+                  </div>
+
+
+
+
+                  </div>
+                  
+              </form>
+          </div>
+        
+      </div>
+  </section>
+ 
+
+ 
+        
+  </div>
+<br/>
+ 
+ 
+  
+<br />
+<br />
+<br />
+<br />
